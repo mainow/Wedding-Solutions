@@ -18,9 +18,9 @@ function Intro() {
         e.preventDefault();
         GiftsManager.bookGift(bookedGift.booker.current.value, giftList[bookedGift.gift.current.value].name);
         console.log(bookedGift.gift.current.value);
-        if (bookedGift.gift.current.value != 0 && bookedGift.gift.current.value != 64) {
+        // if (bookedGift.gift.current.value !== 0 && bookedGift.gift.current.value != 64) {
             GiftsManager.updateGiftList(bookedGift.gift.current.value, giftList[bookedGift.gift.current.value].name);
-        }
+        // }
         sendWhatsAppConfirmation();
     }
 
