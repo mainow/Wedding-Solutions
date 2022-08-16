@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Intro />}/>
         <Route path="/lista-regalo" element={<Intro />}/>
-        <Route path="/gift-list-setup-do-not-visit-link" element={<Setup />}/>
+        <Route path="/admin/gift-list-setup" element={<Setup />}/>
       </Routes>
     </BrowserRouter>
   );

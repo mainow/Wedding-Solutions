@@ -17,7 +17,10 @@ function Intro() {
     const handleSend = (e) => {
         e.preventDefault();
         GiftsManager.bookGift(bookedGift.booker.current.value, giftList[bookedGift.gift.current.value].name);
-        GiftsManager.updateGiftList(bookedGift.gift.current.value, giftList[bookedGift.gift.current.value].name);
+        console.log(bookedGift.gift.current.value);
+        if (bookedGift.gift.current.value != 0 && bookedGift.gift.current.value != 64) {
+            GiftsManager.updateGiftList(bookedGift.gift.current.value, giftList[bookedGift.gift.current.value].name);
+        }
         sendWhatsAppConfirmation();
     }
 
@@ -26,7 +29,7 @@ function Intro() {
         <div className="intro container-fluid py-5 d-flex justify-content-center">
             <div className="form container-fluid">
                 <h1>Lista de regalos<span className="dot-color">.</span></h1>
-                <p>Aqui puedes anotar tus datos para la lista de regalos de la boda de Arami & Pablo</p>
+                <p>Lista de posibles regalos para el Té de Cocina de Arami Hovy</p>
                 <form onSubmit={handleSend}>
                     <label htmlFor="">Nombre</label>
                     <input type="text" required ref={bookedGift.booker} className="form-control" placeholder="" />
