@@ -3,7 +3,7 @@ import { GiftsManager } from "../GiftsManager";
 
 function Intro() {
 
-    const [giftList, setGiftList] = useState({0: 1, 1: 2});
+    const [giftList, setGiftList] = useState({});
 
     const bookedGift = {
         booker: useRef(),
