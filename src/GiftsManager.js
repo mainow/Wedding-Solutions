@@ -1,5 +1,5 @@
 import { firestore } from "./firebase";
-import { collection, addDoc, updateDoc, doc, setDoc, onSnapshot } from "@firebase/firestore"
+import { collection, addDoc, updateDoc, doc, setDoc, onSnapshot, getDocs } from "firebase/firestore"
 
 class GiftsManager__ {
     constructor() {
@@ -9,6 +9,11 @@ class GiftsManager__ {
 
     getGiftList(listSetter) {
         onSnapshot(doc(this.giftList, "gifts"), gifts => listSetter(gifts.data()));
+    }
+    
+    async getBookedGifts(bookedGiftSetter) {
+        const querySnapshot = await getDocs(this.bookedGifts);
+        bookedGiftSetter(querySnapshot);
     }
 
     createGiftList() {
