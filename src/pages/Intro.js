@@ -28,7 +28,7 @@ function Intro() {
         <div className="intro container-fluid py-5 d-flex justify-content-center">
             <div className="form container-fluid">
                 <h1>Lista de regalos<span className="dot-color">.</span></h1>
-                <p>Lista de posibles regalos para el Té de Cocina de Arami Hovy</p>
+                <p>Aca podes completar tus datos para el Té de Cocina de Arami Hovy. Al finalizar permita al sistema enviar el mensaje de Whatsapp a nuestros organizadores.</p>
                 <form onSubmit={handleSend}>
                     <label htmlFor="">Nombre</label>
                     <input type="text" required ref={bookedGift.booker} className="form-control" placeholder="" />
