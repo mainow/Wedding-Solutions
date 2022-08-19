@@ -17,7 +17,7 @@ function Intro() {
     const handleSend = (e) => {
         e.preventDefault();
         GiftsManager.bookGift(bookedGift.booker.current.value, giftList[bookedGift.gift.current.value].name);
-        if (bookedGift.gift.current.value !== '0' && bookedGift.gift.current.value !== '84') {
+        if (giftList[bookedGift.gift.current.value].name !== 'Opcion libre (personal)') {
             GiftsManager.updateGiftList(bookedGift.gift.current.value, giftList[bookedGift.gift.current.value].name);
         }
         sendWhatsAppConfirmation();
