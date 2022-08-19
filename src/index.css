@@ -1,8 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  border-radius: 0 !important;
   font-family: 'Montserrat';
+}
+
+*:not(.btn, .modal-content) {
+  border-radius: 0 !important;
 }
 
 input {
@@ -49,4 +52,9 @@ select:focus {
 }
 tr:hover .action-btn {
   display: block;
+}
+
+.table thead {
+  border-bottom: 2px solid #bc8c3c !important;
+  box-shadow: none !important;
 }
